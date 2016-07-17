@@ -10,8 +10,6 @@ $headers = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 $headers .= 'From:' . $email. "\r\n"; // Sender's Email
 
-$message .= $rrequest;
-
 $message = wordwrap($message, 70);
 
 $to = "hayley.vb.davidson@gmail.com";
