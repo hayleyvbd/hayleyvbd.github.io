@@ -1,0 +1,204 @@
+html, body{
+	margin:0px;
+	height:100%;
+	color:white;
+}
+
+header{
+	color:white;
+	background-color:gray;
+	width:100%;
+	padding-top:7%;
+	overflow: hidden;
+	
+	clear:both;
+}
+
+header h1{
+	font-size:2.25em;
+	font-family:Arial;
+	padding-bottom:0.5em;
+	margin-left:20%;
+	float:left;
+	
+}
+
+nav{
+	padding-left:20%;
+	padding-right:20%;
+	background-color:lightgray;
+	clear:both;
+	overflow: hidden;
+}
+
+nav ul{
+	margin:0;
+	padding:0;
+}
+
+nav li {
+	width: 20%;
+	padding-top:.7em;
+	padding-bottom:.7em;
+	float: left;
+	color:white;
+	background-color:lightgray;
+	list-style: none;
+	text-align:center;
+	font-family:Arial;
+}
+
+#background{
+	height: 100%;
+	
+	
+}
+
+.content{
+	padding-top: 2em;
+	padding-bottom: 10em;
+	padding-left:3em;
+	padding-right:3em;
+	margin-left:20%;
+	margin-right:20%;
+	margin-top: 3em;
+	background-color:lightgray;
+	border-radius: 1em 1em 0em 0em;
+	border-radius-topright: 1em;
+	border-radius-topleft: 1em;
+	font-family:Arial;
+}
+
+article{
+	width:100%;
+	clear:both;
+	overflow:hide;
+}
+
+article img{
+	width: 40%;
+	height:auto;
+	float:left;
+	display:none; 
+}
+
+
+#content p, #content h2{
+	padding: 10%;
+}
+
+a{
+	color:white;
+}
+
+#colorpicker{
+	position:absolute;
+	top:-7%;
+	width: 20%;
+	margin-right:20%;
+	margin-left:60%;
+	background-color:white;
+	border-radius: 0em 0em 1em 1em;
+}
+
+.pickcolor{
+	border-radius:50%;
+	width:10%;
+	padding-bottom: 10%;
+	float: left;
+	margin:5%;
+}
+
+.red{background-color:red;}
+.orange{background-color:orange;}
+.yellow{background-color:yellow;}
+.green{background-color:green;}
+.blue{background-color:blue;}
+
+#home{
+	display:block;
+}
+#interests{
+	display:none;
+}
+#volunteering{
+	display:none;
+}
+#portfolio{
+	display:none;
+}
+#contact{
+	display:none;
+}
+#socialmedia{
+	margin-right:20%;
+	padding-top:1.5em;
+	float:right;
+}
+img{
+	width: 2.25em;
+	height: 2.25em;
+	padding-right:0.5em;
+}
+
+form {
+    width: 100%;
+    margin: 0 auto;
+}
+
+label, input, select {
+    display: inline-block;
+}
+
+label {
+    width: 30%;
+    text-align: right;
+}
+
+label + input, label + select {
+    width: 45%;
+    margin: 0 5% 1em 5%;
+}
+
+input + input, select + select {
+    float: right;
+}
+
+@media(max-width:768px){
+    .content{
+		margin-left:0;
+		margin-right:0;
+		border-radius:0;
+		
+	}
+	header{
+		width: auto;
+	}
+	header h1{
+		text-align:center;
+		float:none;
+		margin:0;
+		padding-left:0;
+		padding-right:0;
+	}
+	nav{
+		padding-left:5%;
+		padding-right:5%;
+	}
+	nav li{
+		float:none;
+		width:100%;
+		text-align:center;
+	}
+	#socialmedia{
+		display:none;
+	}
+	#colorpicker{
+		position:static;
+		width: auto;
+		margin-left:5%;
+		margin-right:5%;		
+	}
+
+	
+}

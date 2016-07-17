@@ -1,8 +1,282 @@
-﻿<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
 <head>
-	<title> Hayl's Github</title>
+	<title>Hayley Davidson's Portfolio</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="jquery.min.js"></script> 
+	<script src="jquery-ui.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#colorpicker').hover(
+				function(){
+					$(this).animate(
+						{
+							top:'0'
+						},
+						500,
+						'easeInSine'
+					)
+					
+				}, //ease in
+				function(){
+					$(this).animate(
+						{
+							top:'-7%'
+						},
+						500,
+						'easeInSine'
+					)
+			}); //end hover animations
+			$('.red').click(
+				function(){
+					$('header').animate(
+						{
+							backgroundColor:'#C60000'
+						},
+						1500,
+						'easeInSine'
+					),
+					$('nav, nav li, .content').animate(
+						{
+							backgroundColor:'#FF3939'
+						},
+						1500,
+						'easeInSine'
+					)
+				}
+			)
+			$('.orange').click(
+				function(){
+					$('header').animate(
+						{
+							backgroundColor:'rgb(255,140,0)'
+						},
+						1500,
+						'easeInSine'
+					)
+					$('nav, nav li, .content').animate(
+						{
+							backgroundColor:'#ffba39'
+						},
+						1500,
+						'easeInSine'
+					)
+				}
+			)
+			$('.yellow').click( 
+				function(){
+					$('header').animate(
+						{
+							backgroundColor:'rgb(255,215,0)'
+						},
+						1500,
+						'easeInSine'
+					)
+					$('nav, nav li, .content').animate(
+						{
+							backgroundColor:'yellow'
+						},
+						1500,
+						'easeInSine'
+					)
+				}
+			)
+			$('.green').click(
+				function(){
+					$('header').animate(
+						{
+							backgroundColor:'#00A41D'
+						},
+						1500,
+						'easeInSine'
+					)
+					$('nav, nav li, .content').animate(
+						{
+							backgroundColor:'#00CE24'
+						},
+						1500,
+						'easeInSine'
+					)
+				}
+			)
+			$('.blue').click(
+				function(){
+					$('header').animate(
+						{
+							backgroundColor:'#0b0e96'
+						},
+						1500,
+						'easeInSine'
+					)
+					$('nav, nav li, .content').animate(
+						{
+							backgroundColor:'#262ad5'
+						},
+						1500,
+						'easeInSine'
+					)
+				}
+			) // end colourpicker animations
+			
+			$('.homebutton').click(function(evt){
+				evt.preventDefault();
+				$('.content:visible').fadeOut('slow',function(){
+					$('#home').fadeIn('slow');
+				});
+			});
+			
+			$('.interestsbutton').click(function(evt){
+				evt.preventDefault();
+				$('.content:visible').fadeOut('slow',function(){
+					$('#interests').fadeIn('slow');
+				});
+			});
+			$('.volunteeringbutton').click(function(evt){
+				evt.preventDefault();
+				$('.content:visible').fadeOut('slow',function(){
+					$('#volunteering').fadeIn('slow');
+				});
+			});
+			$('.portfoliobutton').click(function(evt){
+				evt.preventDefault();
+				$('.content:visible').fadeOut('slow',function(){
+					$('#portfolio').fadeIn('slow');
+				});
+			});
+			$('.contactbutton').click(function(evt){
+				evt.preventDefault();
+				$('.content:visible').fadeOut('slow',function(){
+					$('#contact').fadeIn('slow');
+				});
+			});
+			
+			
+			$("#submit").click(function() {
+				var name = $("#name").val();
+				var email = $("#email").val();
+				var subject = $("#subject").val();
+				var rrequest = $("#rrequest").val();
+				var message = $("#message").val();
+				
+				$.post("contact_form.php",{
+					name1: name,
+					email1: email,
+					subject1: subject,
+					rrequest1: rrequest,
+					message1: message
+					})
+				
+			});
+			
+			
+		});//end page ready
+	</script>
 </head>
 <body>
+	
+	<header>
+		<h1>Hayley's Website</h1>
+		<div id="socialmedia">
+			<a href="http://www.linkedin.com/in/hayley-davidson" target="_blank"><img src="linkedin-512.png"></a>
+			<a href="https://www.pinterest.com/hayleyvbd/" target="_blank"><img src="pinterest_badge_white.png"></a>
+			<a href="http://github.com/hayleyvbd" target="_blank"><img src="github-256.png"></a>
+		</div>
+	</header>
+	<div id="colorpicker">
+	<div class="pickcolor red"></div>
+	<div class="pickcolor orange"></div>
+	<div class="pickcolor yellow"></div>
+	<div class="pickcolor green"></div>
+	<div class="pickcolor blue"></div>
+	</div>
+	<nav>
+		<ul>
+			<li class = 'homebutton'>Home</li>
+			<li class = 'interestsbutton'>Skills</li>
+			<li class = 'volunteeringbutton'>Volunteering</li>
+			<li class = 'portfoliobutton'>Portfolio</li>
+			<li class = 'contactbutton'>Contact</li>
+		</u1>
+	</nav>
+	
+	<div id="background">
+		<div class="content" id="home">
+			<h2>Welcome to my website!</h2>
+			<p>	Hello! My name is Hayley. I'm a recent highschool graduate aiming for my bachelor's degree in Computer Science. I've always been interested in technology, and I've had a lot of fun making websites, designing web apps, hacking/repurposing old devices, and coding mods for videogames. I also enjoy composing music, creating art, and studying the environment. In 5 years I would like to be putting my skills to good use - perhaps creating therapeutic games for people with disabilities, analyzing statistics for healthcare, or managing websites and volunteer databases for nonprofits. </p>
+			<h2>News</h2>
+			<p>July 15, 2016 - I've added some links to my Github, and set up a new LinkedIn account. <span style='text-decoration:underline' class='portfoliobutton'>Check out my portfolio!</span></p>
+		</div>
+		<div class="content" id="interests">
+			<h2>Skills</h2>
+			<p>Every day I try to learn something new. Here's a few things I'm very proud to know how to do:</p>
+			
+			<p>Web development. I had the great opprotunity to be a part of the Web Development Skills Bootcamp offered by the SIEC. We learned about HTML, CSS, and just a little bit of Javascript, as well as responsive web design. Since then I've learned much more about Javascript, as well as JQuery and PHP. Check out some of the websites in my portfolio!</p>
+			
+			<p>Programming. I've always been pretty passionate about programming. My first experience was when I was 12 years old, and I wanted to hack my Pokemon games to make my own story. Since then I've taken a lot of classes and made a lot of cool programs and games. I've learned VB, C++, Python, and Javascript, as well as some niche languages like Boo. Check out my portfolio, download some goodies from my GitHub, or catch me at a Game Jam!</p>
+			
+			<p>Art and design. I've loved art since I was a little kid, and I've done a lot of traditional and digital art. I love using lots of bright colours and symbolism in my artwork, as well as using thick, bold lines. Traditionally, I like using bright markers and black pens, as well as panels of undiluted, bright paint for murals. Digitally, I've used programs like Photoshop, Corel Painter, and SAI to make digital paintings, sketches, and graphics, as well as edit photos. I've also used programs like Illustrator to make icons, video game sprites, and GUI elements using vector graphics. </p>
+		</div>
+			<div class="content" id="volunteering">
+			<h2>Volunteering</h2>
+			<p>Being involved in the community has always been important to me. I've had the opprotunity to be involved with a lot of great causes that have benefitted from my skills.</p>
+			<article>
+				<img src="wireframe-image.png">
+				<h3>St. Pauls Hospital Community Day</h3>
+				<p>My classmates and I had the opprotunity to help out St. Pauls Hospital run their Community Day on May 25. We helped set up and close down, served hotdogs, and answered questions to give everyone a great time.</p>
+				
+			</article>
+			<article>
+			<img src="wireframe-image.png">
+			<h3>TDC's Eco Club</h3>
+			<p>In the 2015-2016 school year, many students from TDC got together to create the school's first Off The Grid Ecoclub. We met many times to discuss our clean energy goals, and got many things accomplished in our first year. We started a social media campaign and made several videos to support our cause. We built and maintained several vermi composts, and worked very hard to establish a garden at the back of the school for all to enjoy. We also did an energy audit to see how much power the school wasted and how we could cut back, as well as fundraising and establishing a deal with SaskPower to install solar panels.</p>
+			</article>
+			<article>
+			<img src="wireframe-image.png">
+			<h3>TDC's Art Club</h3>
+			<p>In the 2015-2016 school year I had the amazing opprotunity to work with TDC's art club to complete two murals in the hallway of the school. We collaborated with local artists and with eachother to design a unique mural to represent our community's roots and values. We completed the project over several weekends, putting in long hours to get the job done.</p>
+			</article>
+		</div>
+		<div class="content" id="portfolio">
+			<h2>Portfolio</h2>
+			<article>
+			<img src="wireframe-image.png">
+			<h2>line</h2>
+			<p>A web app that allows you to draw lines that dissipate into colourful bubbles. Take a look by<a href="http://hayleyvbd.github.io/line" target="_blank"+>clicking here</a></p>
+			</article>
+		</div>
+		<div class="content" id="contact">
+			<h2>Contact</h2>
+			<p>Hi! I'm always looking to make new connections. Whether you're interested in working together on a project, having me come out and volunteer, or just have some feedback, I'm excited to hear from you. Please fill out the form below, and I'll get back to you as soon as possible. You can also reach me through my LinkedIn.</p>
+			<p>
+			<form>
+			<label for="name" class="label">Name: </label>
+			<input name="name" type="text" id="name" size="36">
+			<br>
+			<label for="email" class="label">Email Address: </label>
+			<input name="email" type="text" id="email" size="36">
+			<br>
+			<label for="subject" class="label">Subject: </label>
+			<select name="subject" id="subject">
+			<option>Please select...</option>
+			<option>Collaboration Opprotunity</option>
+			<option>Job Opprotunity</option>
+			<option>Volunteer Opprotunity</option>
+			<option>Feedback</option>
+			<option>Other...</option>
+			</select>
+			<br>
+			<label for="subjectother" class="label">Other Subject:</label>
+			<input name="subjectother" type="text" id="subjectother" size="36">
+			<br>
+			<label for="rrequest" class="label">Would you like to receive a copy of my resume?</label>
+			<input type="checkbox" name="rrequest" id="yes" value="yes">
+			<label for="message" class="label">Message: </label>
+			<input name="message" type="text" id="message" size="36">
+			<input type="button" id="submit" value="Send Message"/>
+			
+			</form>
+			</p>
+		</div>
+	</div>
+
 </body>
 </html>
