@@ -49,8 +49,7 @@ nav li {
 }
 
 #background{
-	height: 100%;
-	
+	height: auto;
 	
 }
 
@@ -70,16 +69,24 @@ nav li {
 }
 
 article{
-	width:100%;
 	clear:both;
-	overflow:hide;
+	overflow:hidden;
+	color: darkgrey;
+	background-color:white;
+	border-radius:1em;
+	padding: 2em;
+	margin-bottom:2em;
+}
+
+article a{
+	color:darkgrey;
 }
 
 article img{
-	width: 40%;
+	margin-right: 1em;
+	width: 50%;
 	height:auto;
 	float:left;
-	display:none; 
 }
 
 
@@ -93,7 +100,7 @@ a{
 
 #colorpicker{
 	position:absolute;
-	top:-7%;
+	top:0;
 	width: 20%;
 	margin-right:20%;
 	margin-left:60%;
@@ -135,7 +142,7 @@ a{
 	padding-top:1.5em;
 	float:right;
 }
-img{
+#socialmedia img{
 	width: 2.25em;
 	height: 2.25em;
 	padding-right:0.5em;

@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <head>
+	<meta name="viewport" content = "width=device-width">
+	
 	<title>Hayley Davidson's Portfolio</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="jquery.min.js"></script> 
@@ -41,6 +43,13 @@
 						},
 						1500,
 						'easeInSine'
+					),
+					$('article, article a').animate(
+						{
+							color:'#C60000'
+						},
+						1500,
+						'easeInSine'
 					)
 				}
 			)
@@ -56,6 +65,13 @@
 					$('nav, nav li, .content').animate(
 						{
 							backgroundColor:'#ffba39'
+						},
+						1500,
+						'easeInSine'
+					),
+					$('article, article a').animate(
+						{
+							color:'rgb(255,140,0)'
 						},
 						1500,
 						'easeInSine'
@@ -77,6 +93,13 @@
 						},
 						1500,
 						'easeInSine'
+					),
+					$('article, article a').animate(
+						{
+							color:'rgb(255,215,0)'
+						},
+						1500,
+						'easeInSine'
 					)
 				}
 			)
@@ -95,6 +118,13 @@
 						},
 						1500,
 						'easeInSine'
+					),
+					$('article, article a').animate(
+						{
+							color:'#00A41D'
+						},
+						1500,
+						'easeInSine'
 					)
 				}
 			)
@@ -110,6 +140,13 @@
 					$('nav, nav li, .content').animate(
 						{
 							backgroundColor:'#262ad5'
+						},
+						1500,
+						'easeInSine'
+					),
+					$('article, article a').animate(
+						{
+							color:'#0b0e96'
 						},
 						1500,
 						'easeInSine'
@@ -183,8 +220,10 @@
 		<div class="content" id="home">
 			<h2>Welcome to my website!</h2>
 			<p>	Hello! My name is Hayley. I'm a recent highschool graduate aiming for my bachelor's degree in Computer Science. I've always been interested in technology, and I've had a lot of fun making websites, designing web apps, hacking/repurposing old devices, and coding mods for videogames. I also enjoy composing music, creating art, and studying the environment. In 5 years I would like to be putting my skills to good use - perhaps creating therapeutic games for people with disabilities, analyzing statistics for healthcare, or managing websites and volunteer databases for nonprofits. </p>
+			<article>
 			<h2>News</h2>
 			<p>July 15, 2016 - I've added some links to my Github, and set up a new LinkedIn account. <span style='text-decoration:underline' class='portfoliobutton'>Check out my portfolio!</span></p>
+			</article>
 		</div>
 		<div class="content" id="interests">
 			<h2>Skills</h2>
@@ -221,13 +260,14 @@
 			<article>
 			<img src="wireframe-image.png">
 			<h2>line</h2>
-			<p>A web app that allows you to draw lines that dissipate into colourful bubbles. Take a look by<a href="http://hayleyvbd.github.io/line" target="_blank"+>clicking here</a></p>
+			<p>A web app that allows you to draw lines that dissipate into colourful bubbles. Take a look by <a href="http://hayleyvbd.github.io/line" target="_blank"+>clicking here</a>!</p>
 			</article>
 		</div>
 		<div class="content" id="contact">
 			<h2>Contact</h2>
 			<p>Hi! I'm always looking to make new connections. Whether you're interested in working together on a project, having me come out and volunteer, or just have some feedback, I'm excited to hear from you. Please fill out the form below, and I'll get back to you as soon as possible. You can also reach me through my LinkedIn.</p>
 			<p>
+			<article>
 			<form action="https://formspree.io/hayley.vb.davidson@gmail.com" method="POST">
 				<label for="name" class="label">Name: </label>
 				<input name="name" type="text" id="name" size="36">
@@ -255,6 +295,7 @@
 				<input type="text" name="_gotcha" style="display:none" />
 				<input type="submit" id="submit" value="Submit"/>
 			</form>
+			</article>
 			</p>
 		</div>
 	</div>
